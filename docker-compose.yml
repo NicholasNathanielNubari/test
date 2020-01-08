@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  pgdp:          #change name too
+    image: postgres:latest   # instead of postgres:latest
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: always
+
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    
+
+  flaskapp:
+     build: ./docker_file
+     volumes:
+       - ./docker_file:/usr/src/app
+     ports:
+       - 5000:5000
+     restart: always
+volumes:
+  db-data:
+    driver: local
