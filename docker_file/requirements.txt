@@ -12,7 +12,7 @@ Jinja2==2.8
 jmespath==0.9.4
 jwt==0.6.1
 lazy-object-proxy==1.4.3
-Mako==1.0.6
+Mako==1.2.2
 MarkupSafe==0.23
 marshmallow==3.2.2
 marshmallow-sqlalchemy==0.17.0
